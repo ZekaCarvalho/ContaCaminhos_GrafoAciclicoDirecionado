@@ -1,7 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contador de Caminhos {% endblock %}
+{% block title %}Contador de Caminhos
+{% endblock %}
 
 {% block body %}
-    {{ qtdCaminhos }}
+
+
+	<div style="margin: 10%">
+		<div style="margin-bottom: 50px">
+			<h1>O grafo possui
+				{{ qtdCaminhos }}
+				caminhos entre o vértice inicial e final</h1>
+		</div>
+
+
+		<h3>Grafos Acíclicos Direcionados (ou dirigidos)</h3>
+		<div style="display: flex; align-items:center">
+			<p style="font-family: sans-serif; size: 20; margin-right: 40px">
+				Em matemática, um grafo acíclico dirigido, (em inglês: directed acyclic graph, ou simplesmente um dag ou DAG), é um grafo dirigido sem ciclo; isto é, para qualquer vértice
+				<b>v</b>, não há nenhuma ligação dirigida começando e acabando em
+				<b>v</b>.
+				<br/>
+				Estes grafos aparecem em modelos onde não faz sentido que um vértice tenha uma ligação com si próprio. Por exemplo se uma linha
+				<b>u→v</b>
+				indica que
+				<b>v</b>
+				é parte de
+				<b>u</b>, tal ligação indicaria que
+				<b>u</b>
+				é parte de si mesmo, o que é impossível.
+			</p>
+			<img src="GRAFO ACICLICO DIRECIONADO2.png" alt="grafo" title="grafo">
+		</div>
+
+		<p style="font-family: sans-serif; size: 20; margin-right: 50px">
+			<b>Terminologia:</b>
+			Uma origem (inglês: source: fonte) é um vértice sem ligações que lhe chegam, enquanto que um sorvedouro (inglês: sink: afundamento) é um vértice sem ligações que partem dele. Um gad (grafo acíclico dirigido) finito tem pelo menos uma origem e pelo menos um sorvedouro. A extensão de um gad finito é a extensão (número de linhas) do caminho dirigido mais extenso de todos.</p>
+
+		<p style="font-family: sans-serif; size: 20; margin-top: 50px; margin-right: 50px">
+			<b>Grafos dirigidos acíclicos têm muitas aplicações importantes na informática, incluindo:</b>
+		</p>
+		<p style="font-family: sans-serif; size: 20; margin-right: 50px">
+			-- A estrutura de directoria num típico sistema de ficheiros UNIX
+			<br/>
+			-- A parse tree construída por um compilador
+			<br/>
+			-- Rede Bayesiana
+			<br/>
+			-- Análise retrossintética, uma técnica de planejamento de sínteses orgânicas
+			<br/>
+			-- Como base de arquitectura de algumas tecnologias de registro distribuído ou Distributed Ledger Technologies (DLT) que se distinguem da arquitectura Blockchain, como IOTA e Hedera Hashgraph.
+		</p>
+	</div>
+
+
 {% endblock %}
